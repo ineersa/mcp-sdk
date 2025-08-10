@@ -30,7 +30,23 @@ final readonly class Response implements \JsonSerializable
         return [
             'jsonrpc' => '2.0',
             'id' => $this->id,
-            'result' => $this->result,
+            'result' => self::removeNullValues($this->result),
         ];
+    }
+
+    /**
+     * @param array<mixed> $data
+     *
+     * @return array<mixed>
+     */
+    private static function removeNullValues(array $data): array
+    {
+        foreach ($data as &$value) {
+            if (\is_array($value)) {
+                $value = self::removeNullValues($value);
+            }
+        }
+
+        return array_filter($data, fn ($value) => null !== $value);
     }
 }
