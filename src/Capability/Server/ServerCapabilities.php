@@ -20,7 +20,7 @@ use Symfony\AI\McpSdk\Capability\Tool\ToolCapability;
 /**
  * https://modelcontextprotocol.io/specification/2025-06-18/schema#servercapabilities
  */
-final readonly class ServerCapabilities
+final readonly class ServerCapabilities implements \JsonSerializable
 {
     /**
      * @param array<string, array<string, mixed>>|null $experimental
@@ -35,4 +35,8 @@ final readonly class ServerCapabilities
     ) {
     }
 
+    public function jsonSerialize(): array
+    {
+        return array_filter((array) $this, fn ($value) => null !== $value);
+    }
 }

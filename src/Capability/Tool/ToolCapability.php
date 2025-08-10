@@ -11,13 +11,10 @@
 
 namespace Symfony\AI\McpSdk\Capability\Tool;
 
-/**
- * @experimental
- */
-final class ToolCapability
+final readonly class ToolCapability
 {
     public function __construct(
-        public readonly ?bool $listChanged = null,
+        public ?bool $listChanged = null,
     ) {
     }
 }

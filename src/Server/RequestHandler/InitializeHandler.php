@@ -29,7 +29,7 @@ final class InitializeHandler extends BaseRequestHandler
     {
         return new Response($message->id, [
             'protocolVersion' => $this->protocolVersion,
-            'capabilities' => $this->serverCapabilities,
+            'capabilities' => $this->serverCapabilities->jsonSerialize(),
             'serverInfo' => $this->implementation,
         ]);
     }
