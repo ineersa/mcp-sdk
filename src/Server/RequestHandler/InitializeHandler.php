@@ -19,9 +19,9 @@ use Symfony\AI\McpSdk\Message\Response;
 final class InitializeHandler extends BaseRequestHandler
 {
     public function __construct(
-        private readonly string $protocolVersion = '2025-03-26',
         private readonly Implementation $implementation,
         private readonly ServerCapabilities $serverCapabilities,
+        private readonly string $protocolVersion = '2025-03-26',
     ) {
     }
 

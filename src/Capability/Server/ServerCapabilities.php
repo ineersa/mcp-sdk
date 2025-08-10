@@ -17,6 +17,9 @@ use Symfony\AI\McpSdk\Capability\Prompt\PromptCapability;
 use Symfony\AI\McpSdk\Capability\Resource\ResourceCapability;
 use Symfony\AI\McpSdk\Capability\Tool\ToolCapability;
 
+/**
+ * https://modelcontextprotocol.io/specification/2025-06-18/schema#servercapabilities
+ */
 final readonly class ServerCapabilities
 {
     /**
