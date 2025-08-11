@@ -62,7 +62,8 @@ with its capabilities, which are defined by two main classes:
 * ``Symfony\AI\McpSdk\Capability\Server\Implementation``: Describes the server software itself (e.g., its name and version).
 * ``Symfony\AI\McpSdk\Capability\Server\ServerCapabilities``: Details the features the server supports, such as tools, prompts, or resources.
 
-After that client see available capabilities and will ask the server to list the tools/resource/prompts etc. depending on ServerCapabilities you provided.
+After that client see available capabilities and will ask the server to list the tools/resource/prompts etc. depending on ``ServerCapabilities`` you provided.
+Also ``initialize`` request provides information about MCP protocol version.
 
 When you want to add a new tool for example
 **Tool** that can tell the current time, you need to provide some metadata to the
