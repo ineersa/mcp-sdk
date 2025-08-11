@@ -30,7 +30,7 @@ final class InitializeHandler extends BaseRequestHandler
     }
 
     /**
-     * https://modelcontextprotocol.io/specification/2025-06-18/schema#initializeresult
+     * https://modelcontextprotocol.io/specification/2025-06-18/schema#initializeresult.
      */
     public function createResponse(Request $message): Response
     {

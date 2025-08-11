@@ -18,7 +18,7 @@ use Symfony\AI\McpSdk\Capability\Resource\ResourceCapability;
 use Symfony\AI\McpSdk\Capability\Tool\ToolCapability;
 
 /**
- * https://modelcontextprotocol.io/specification/2025-06-18/schema#servercapabilities
+ * https://modelcontextprotocol.io/specification/2025-06-18/schema#servercapabilities.
  */
 final readonly class ServerCapabilities implements \JsonSerializable
 {
@@ -26,12 +26,12 @@ final readonly class ServerCapabilities implements \JsonSerializable
      * @param array<string, array<string, mixed>>|null $experimental
      */
     public function __construct(
-        public ?LoggingCapability    $logging = null,
-        public ?PromptCapability     $prompts = null,
-        public ?ResourceCapability   $resources = null,
-        public ?ToolCapability       $tools = null,
+        public ?LoggingCapability $logging = null,
+        public ?PromptCapability $prompts = null,
+        public ?ResourceCapability $resources = null,
+        public ?ToolCapability $tools = null,
         public ?CompletionCapability $completions = null,
-        public ?array                $experimental = null,
+        public ?array $experimental = null,
     ) {
     }
 
